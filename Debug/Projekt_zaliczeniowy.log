@@ -1,0 +1,6 @@
+﻿  Źródło.cpp
+c:\users\domin\source\repos\projekt_zaliczeniowy\projekt_zaliczeniowy\źródło.cpp(40): warning C4129: " ": nierozpoznany znak sekwencji ucieczki
+c:\users\domin\source\repos\projekt_zaliczeniowy\projekt_zaliczeniowy\źródło.cpp(42): warning C4129: " ": nierozpoznany znak sekwencji ucieczki
+c:\users\domin\source\repos\projekt_zaliczeniowy\projekt_zaliczeniowy\źródło.cpp(45): warning C4129: " ": nierozpoznany znak sekwencji ucieczki
+c:\users\domin\source\repos\projekt_zaliczeniowy\projekt_zaliczeniowy\źródło.cpp(265): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  Projekt_zaliczeniowy.vcxproj -> C:\Users\domin\source\repos\Projekt_zaliczeniowy\Debug\Projekt_zaliczeniowy.exe
