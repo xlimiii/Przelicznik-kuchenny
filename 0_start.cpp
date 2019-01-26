@@ -12,6 +12,8 @@
 #include <time.h>
 #include<fstream>
 #include"Nag³ówek.h"
+#include"przelicznik_foremek.h"
+#include"przelicznik_kulinarny.h"
 using namespace std;
 
 void tytul()
@@ -50,6 +52,8 @@ void menu()
 	instrukcja();
 	int wybor;
 	do {
+		przelicznik_foremek x;
+		przelicznik_kulinarny y;
 		system("CLS");
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 13);
 		cout << "        `7MMM.     ,MMF'                                 " << endl;
@@ -65,8 +69,8 @@ void menu()
 		cin >> wybor;
 		switch (wybor)
 		{
-		case 1: przel_kulinarny(); break;
-		case 2: przel_foremek(); break;
+		case 1: y.przel_kulinarny(); break;
+		case 2: x.przel_foremek(); break;
 		case 3: losuj_przepis(); break;
 		default: {cout << "Cos poszlo nie tak... Sprobuj ponownie" << endl; Sleep(2000); } break;
 		}
