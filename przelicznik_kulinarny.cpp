@@ -17,28 +17,48 @@ using namespace std;
 void przelicznik_kulinarny::instrukcja1()
 {
 	system("cls");
-	cout << "PRZELICZNIK KULINARNY \n";
-	cout << "Ten kalkulator pozwala przeliczac miare, wage i objetosc skladnikow na wybrane jednostki/miary.\n\n";
-	cout << "Instrukcja obslugi programu\n";
-	cout << "1) Wybierz z listy produkt, dla ktorego chcesz wykonac przeliczenie. \n";
-	cout << "2) Wybierz, dla jakiej jednostki masz podana ilosc produktu.\n";
-	cout << "3) Wybierz, w jakiej jednostce chcesz otrzymac wynik po przeliczeniu.\n";
-	cout << "4) Podaj ilosc produktu dla znanego wymiaru.\n\n";
+	cout << "                                   PRZELICZNIK KULINARNY                                           "  << endl;
+	cout << "  Ten kalkulator pozwala przeliczac miare, wage i objetosc skladnikow na wybrane jednostki/miary.  " << endl << endl;
+	cout << "****************************************************************************************************" << endl;
+	cout << "*                                Instrukcja obslugi programu                                       *" << endl;
+	cout << "*              1) Wybierz z listy produkt, dla ktorego chcesz wykonac przeliczenie.                *" << endl;
+	cout << "*                  2) Wybierz, dla jakiej jednostki masz podana ilosc produktu.                    *" << endl;
+	cout << "*              3) Wybierz, w jakiej jednostce chcesz otrzymac wynik po przeliczeniu.               *" << endl;
+	cout << "*                       4) Podaj ilosc produktu dla znanego wymiaru.                               *" << endl;
+	cout << "*                                                                                                  *" << endl;
+	cout << "****************************************************************************************************" << endl;
 	cout << "Wcisnij enter, aby przejsc dalej.";
 	cin.get(); cin.get();
+}
+void przelicznik_kulinarny::glowna()
+{
+	char kont;
+	do {
+		cout << "Czy chcesz przeliczac dalej?" << endl;
+		cout << "T - tak" << endl << "N - nie, wroc do menu" << endl << "E - nie, zakoncz dzialanie programu" << endl << "Wpisz T, N lub E: ";
+		cin >> kont;
+		switch (kont)
+		{
+		case 'T': przel_kulinarny(); break;
+		case 'N': menu(); break;
+		case 'E': return; break;
+		default: {cout << "Cos poszlo nie tak, sprobuj ponownie"; } break;
+		}
+	} while (kont != 'T' || kont != 'N' || kont != 'E');
+
 }
 void przelicznik_kulinarny::przel_kulinarny()
 {
 	instrukcja1();
 	wybor_produktu();
-	z_czego();
-	do_czego();
-	przel_jedn(Prod, Wym1, Wym2);
+	z_czegoz();
+	do_czegoz();
+	przel_jedn(produkt, z_czego, do_czego);
+	glowna();
+	
 }
-int* przelicznik_kulinarny::wybor_produktu()
-{
-	int produkt;
-	do {
+int przelicznik_kulinarny::wybor_produktu()
+{	do {
 		system("CLS");
 		cout << "Jaki produkt chcesz przeliczyc? " << endl;
 		for (int i = 0; i < 20; i++)
@@ -53,16 +73,15 @@ int* przelicznik_kulinarny::wybor_produktu()
 			Sleep(2000);
 		}
 	} while ((produkt < 1) || (produkt > 20));
-	*Prod = produkt;
+	produkt;
 	system("CLS");
-	return Prod;
+	return produkt;
 }
-int* przelicznik_kulinarny::z_czego()
+int przelicznik_kulinarny::z_czegoz()
 {
-	int z_czego;
 	do {
 		system("CLS");
-		cout << "Przeliczasz produkt: " << tab_prod[*Prod - 1] << endl;
+		cout << "Przeliczasz produkt: " << tab_prod[produkt - 1] << endl;
 		cout << "Z jakiego wymiaru chcesz przeliczac:" << endl;
 		for (int i = 0; i < 6; i++)
 		{
@@ -72,23 +91,21 @@ int* przelicznik_kulinarny::z_czego()
 		}
 		cout << "Wybierz numer: ";
 		cin >> z_czego;
-		if (z_czego != 1 && z_czego != 2 && z_czego != 3 && z_czego && 4 && z_czego != 5 && z_czego != 6)
+		if (z_czego != 1 && z_czego != 2 && z_czego != 3 && z_czego != 4 && z_czego != 5 && z_czego != 6)
 		{
 			cout << "Cos poszlo nie tak. Sprobuj ponownie" << endl;
 			Sleep(2000);
 		}
 	} while (z_czego < 1 || z_czego > 6);
-	*Wym1 = z_czego;
-	return Wym1;
+	return z_czego;
 }
-int* przelicznik_kulinarny::do_czego() //funckja
+int przelicznik_kulinarny::do_czegoz() //funckja
 {
-	int do_czego;
 	do
 	{
 		system("CLS");
-		cout << "Przeliczasz produkt: " << tab_prod[*Prod - 1] << endl;
-		cout << "Przeliczasz z wymiaru: " << wymiar[*Wym1 - 1] << endl;
+		cout << "Przeliczasz produkt: " << tab_prod[produkt-1] << endl;
+		cout << "Przeliczasz z wymiaru: " << wymiar[z_czego-1] << endl;
 		cout << "Jaka jest wymiar docelowy?" << endl;
 		for (int i = 0; i < 6; i++)
 		{
@@ -102,8 +119,7 @@ int* przelicznik_kulinarny::do_czego() //funckja
 			Sleep(3000);
 		}
 	} while (do_czego < 1 || do_czego > 6);
-	*Wym2 = do_czego;
-	return Wym2;
+	return do_czego;
 }
 double przelicznik_kulinarny::jaka_gestosc(int a) //funckja zwracajaca gestosc podanego produktu
 {
@@ -129,39 +145,39 @@ double przelicznik_kulinarny::jaka_gestosc(int a) //funckja zwracajaca gestosc p
 	tab_d[18] = 1.44; //miod
 	return tab_d[a];
 }
-void przelicznik_kulinarny::przel_jedn(int *a, int *b, int *c)
+void przelicznik_kulinarny::przel_jedn(int a, int b, int c)
 {
 	system("CLS");
-	cout << "Przeliczasz produkt: " << tab_prod[*a - 1] << endl;
-	cout << "Przeliczasz z wymiaru: " << wymiar[*b - 1] << endl;
-	cout << "Przeliczasz do wymiaru: " << wymiar[*c - 1] << endl;
+	cout << "Przeliczasz produkt: " << tab_prod[a - 1] << endl;
+	cout << "Przeliczasz z wymiaru: " << wymiar[b - 1] << endl;
+	cout << "Przeliczasz do wymiaru: " << wymiar[c - 1] << endl;
 	cout << "Ilosc produktu: ";
 	double ilosc, wynik;
 	cin >> ilosc;
-	if (*b == *c)
+	if (b == c)
 	{
-		cout << "Przeliczasz z wymiaru: " << wymiar[*b - 1] << " na wymiar: " << wymiar[*c - 1] << ". " << endl;
+		cout << "Przeliczasz z wymiaru: " << wymiar[b - 1] << " na wymiar: " << wymiar[c - 1] << ". " << endl;
 		wynik = ilosc;
-		cout << ilosc << wym_przez[*b - 1] << " to po prostu " << wynik << wym_przez[*c - 1] << ". " << endl;
+		cout << ilosc << wym_przez[b - 1] << " to po prostu " << wynik << wym_przez[c - 1] << ". " << endl;
 	}
 	else
 	{
-		if ((*b) == 1 || (*b) == 2 || (*b) == 3)
+		if ((b) == 1 || (b) == 2 || (b) == 3)
 		{
-			wynik = ilosc * jaka_gestosc(*a - 1) * tab[*b - 1] / tab[*c - 1];
-			cout << ilosc << wym_przez[*b - 1] << " to  " << wynik << wym_przez[*c - 1] << ". " << endl; //sprawdzic tab dla jednostek dodanych
+			wynik = ilosc * jaka_gestosc(a - 1) * tab[b - 1] / tab[c - 1];
+			cout << ilosc << wym_przez[b - 1] << " to  " << wynik << wym_przez[c - 1] << ". " << endl; //sprawdzic tab dla jednostek dodanych
 		}
-		else if ((*b) == 4 || (*b) == 5)
+		else if ((b) == 4 || (b) == 5)
 		{
-			if ((*c) == 1 || (*c) == 2 || (*c) == 3)
+			if ((c) == 1 || (c) == 2 || (c) == 3)
 			{
-				wynik = ilosc * tab[*b - 1] / jaka_gestosc(*a - 1) / tab[*c - 1];
-				cout << ilosc << wym_przez[*b - 1] << " to " << wynik << wym_przez[*c - 1] << ". " << endl;
+				wynik = ilosc * tab[b - 1] / jaka_gestosc(a - 1) / tab[c - 1];
+				cout << ilosc << wym_przez[b - 1] << " to " << wynik << wym_przez[c - 1] << ". " << endl;
 			}
-			else if ((*c) == 4 || (*c) == 5)
+			else if ((c) == 4 || (c) == 5)
 			{
-				wynik = ilosc * tab[*b - 1] / tab[*c - 1];
-				cout << ilosc << wym_przez[*b - 1] << " to " << wynik << wym_przez[*c - 1] << ". " << endl;
+				wynik = ilosc * tab[b - 1] / tab[c - 1];
+				cout << ilosc << wym_przez[b - 1] << " to " << wynik << wym_przez[c - 1] << ". " << endl;
 			}
 		}
 	}

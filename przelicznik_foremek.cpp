@@ -17,14 +17,17 @@ using namespace std;
 void przelicznik_foremek::instrukcja2()
 {
 	system("cls");
-	cout << "PRZELICZNIK FOREMEK\n";
-	cout << "Ten kalkulator pozwala na przeliczania skladnikow z przepisu na inna foremke (prostokatna blaszke lub tortownice)\n";
-	cout << "Instrukcja obslugi programu\n";
-	cout << "1) Wybierz forme z przepisu.\n";
-	cout << "2) Wybierz forme, do ktorej chcesz wykonac przeliczenie.\n";
-	cout << "3) Podaj ilosc skladnikow w przepisie\n";
-	cout << "4) Wpisz kolejno: nazwe produktu, pozniej jego ilosc oraz jednostke, w ktorej ilosc jest podana.\n";
-	cout << "\nWcisnij enter, aby przejsc dalej.";
+	cout << "                                                 PRZELICZNIK FOREMEK                                                   " << endl;
+	cout << "   Ten kalkulator pozwala na przeliczania skladnikow z przepisu na inna foremke (prostokatna blaszke lub tortownice)   " << endl << endl;
+	cout << "***********************************************************************************************************************" << endl;
+	cout << "*                                           Instrukcja obslugi programu                                               *" << endl;
+	cout << "*                                           1) Wybierz forme z przepisu.                                              *" << endl;
+	cout << "*                          2) Wybierz forme, do ktorej chcesz wykonac przeliczenie.                                   *" << endl;
+	cout << "*                                    3) Podaj ilosc skladnikow w przepisie                                            *" << endl;
+	cout << "*          4) Wpisz kolejno: nazwe produktu, pozniej jego ilosc oraz jednostke, w ktorej ilosc jest podana.           *" << endl;
+	cout << "*                                                                                                                     *" << endl;
+	cout << "***********************************************************************************************************************" << endl;
+	cout << "Wcisnij enter, aby przejsc dalej.";
 	cin.get(); cin.get();
 }
 void przelicznik_foremek::przel_foremek()
@@ -33,17 +36,16 @@ void przelicznik_foremek::przel_foremek()
 	wyb_formy();
 	wyb_formy2();
 	wczyt_skladniki();
-	przeliczone();
+	przeliczone(Nazwy_w, Ilosci_w, Jednostki_w);
 
 }
-double* przelicznik_foremek::wyb_formy()
+double przelicznik_foremek::wyb_formy() //wybor foremek, zwraca objetosc
 {
 	system("cls");
 	char z_for;
-	Z_for = &z_for;
 	cout << "Foremka z przepisu: " << endl;
 	cout << "A - blaszka" << endl << "B - tortownica" << endl;
-	cout << "Wpisz A lub B" << endl;
+	cout << "Wpisz A lub B: ";
 	cin >> z_for;
 	if (z_for == 'A')
 	{
@@ -52,33 +54,24 @@ double* przelicznik_foremek::wyb_formy()
 		cin >> blach1;
 		cout << "Dlugosc drugiego boku = ";
 		cin >> blach2;
-		double x;
-		x = objetoscp(blach1, blach2);
-		v1 = &x;
+		v1 = objetoscp(blach1, blach2);
+		
 	}
 	else if (z_for == 'B')
 	{
 		cout << "Podaj srednice (w cm): ";
 		cin >> sredn;
-		double x;
 		objetosck(sredn);
-		x = objetosck(sredn);
-		v1 = &x;
+		v1 = objetosck(sredn);
 	}
-	cout << v1 << *v1 << endl;
-	system("pause");
 	return v1;
 }
-double* przelicznik_foremek::wyb_formy2()
+double przelicznik_foremek::wyb_formy2()
 {
-	system("cls");
-
 	char do_for;
-	Do_for = &do_for;
-	cout << "Foremka z przepisu: " << *v1 << endl << endl;
 	cout << "Foremka docelowa: " << endl;
 	cout << "A - blaszka" << endl << "B - tortownica" << endl;
-	cout << "Wpisz A lub B" << endl;
+	cout << "Wpisz A lub B: ";
 	cin >> do_for;
 	if (do_for == 'A') // ewentualnie zrobiæ z tego dwie funkcje, ktore sie wywoluja na if, a wartosci blach itp. wskazniki?
 	{
@@ -87,23 +80,20 @@ double* przelicznik_foremek::wyb_formy2()
 		cin >> blach1;
 		cout << "Dlugosc drugiego boku = ";
 		cin >> blach2;
-		double x;
-		x = objetoscp(blach1, blach2);
-		v2 = &x;
+		v2 = objetoscp(blach1, blach2);
 	}
 	else if (do_for == 'B')
 	{
 		cout << "Podaj srednice (w cm): ";
 		cin >> sredn;
 		objetosck(sredn);
-		*v2 = objetosck(sredn);
+		v2 = objetosck(sredn);
 	}
 	return v2;
 }
-void przelicznik_foremek::wczyt_skladniki()
+int przelicznik_foremek::wczyt_skladniki()
 {
 	cout << "Z ilu skladnikow sklada sie ciasto? ";
-	int ilosc_skladnikow;
 	cin >> ilosc_skladnikow;
 	string *Nazwy;
 	Nazwy = new string[ilosc_skladnikow];
@@ -126,16 +116,31 @@ void przelicznik_foremek::wczyt_skladniki()
 		cin >> jednostka;
 		Jednostka[i] = jednostka;
 	}
-	skl = ilosc_skladnikow;
-	Nazwy_w = &Nazwy[0];
-	Ilosci_w = &Ilosci[0];
-	Jednostki_w = &Jednostka[0];
+	Nazwy_w = Nazwy;
+	Ilosci_w = Ilosci;
+	Jednostki_w = Jednostka;
+	return ilosc_skladnikow;
 }
-void przelicznik_foremek::przeliczone()
+void przelicznik_foremek::przeliczone( string* wsk1, double* wsk2, string* wsk3)
 {
-	for (int i = 0; i < skl; i++)
+	system("cls");
+	cout << "Skladniki w przeliczeniu na wybrana foremke: " << endl;
+	for (int i = 0; i < ilosc_skladnikow; i++)
 	{
-		cout << *(Nazwy_w + i) << ": " << *(Ilosci_w + i) * (*v2) / (*v1) << *(Jednostki_w + i) << endl;
+		cout << *(wsk1 + i) << ": " << *(wsk2 + i) * v2/v1 << " " << *(wsk3 + i) << endl;
+	}
+	cout << "\nCzy chcesz zapisac przeliczone wartosci do pliku?" << endl << "Wpisz T/N: ";
+	char wybor;
+	cin >> wybor;
+	if (wybor == 'T')
+	{
+		ofstream plik("Skladniki.txt");
+		plik << "Skladniki w przeliczeniu na wybrana foremke: " << endl;
+		for (int i = 0; i < ilosc_skladnikow; i++)
+		{
+			plik << *(wsk1 + i) << ": " << *(wsk2 + i) * v2 / v1 << *(wsk3 + i) << endl;
+		}
+		cout << "Przeliczone wartosci zostaly zapisane w pliku \"Skladniki\"" << endl;
 	}
 }
 double przelicznik_foremek::objetoscp(double a, double b)

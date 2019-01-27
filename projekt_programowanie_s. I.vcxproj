@@ -119,13 +119,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="0_start.cpp" />
-    <ClCompile Include="1_przelicznik_kulinarny.cpp" />
-    <ClCompile Include="2_przelicznik_foremek.cpp" />
+    <ClCompile Include="przelicznik_kulinarny.cpp" />
+    <ClCompile Include="przelicznik_foremek.cpp" />
     <ClCompile Include="3_losuj_przepis.cpp" />
     <ClCompile Include="Źródło.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Nagłówek.h" />
+    <ClInclude Include="przelicznik_foremek.h" />
+    <ClInclude Include="przelicznik_kulinarny.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

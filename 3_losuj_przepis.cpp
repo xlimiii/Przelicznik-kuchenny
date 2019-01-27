@@ -10,9 +10,26 @@
 #include <string>
 #include <cstdlib> 
 #include <time.h>
-#include<fstream>
+#include <fstream>
 #include"Nag³ówek.h"
 using namespace std;
+void wewnetrzna()
+{
+	char wybor;
+	do {
+		cout << "Co chcesz teraz zrobic?\nA - losuj jeszcze raz\nM - wroc do menu\nE - wyjdz z programu\n";
+		cout << "Wpisz A/M/E: ";
+		cin >> wybor;
+		if (wybor == 'A')
+			losuj_przepis();
+		else if (wybor == 'M')
+			menu();
+		else if (wybor == 'E')
+			return;
+		else
+			cout << "Cos poszlo nie tak, sprobuj ponownie. ";
+	} while (wybor != 'A' && wybor != 'M' && wybor != 'E');
+}
 void losuj_przepis()
 {
 	int nr_przepisu;
@@ -28,7 +45,7 @@ void losuj_przepis()
 		{
 			while (!plik.eof())
 			{
-				plik >> s;
+				getline(plik, s);
 				cout << s << endl;
 			}
 		}
@@ -41,7 +58,7 @@ void losuj_przepis()
 		plik.open("Babka.txt", ios::in);
 		if (plik.is_open()) {
 			while (!plik.eof()) {
-				plik >> s;
+				getline(plik, s);
 				cout << s << endl;
 			}
 		}
@@ -54,7 +71,7 @@ void losuj_przepis()
 		plik.open("Murzynek.txt", ios::in);
 		if (plik.is_open()) {
 			while (!plik.eof()) {
-				plik >> s;
+				getline(plik, s);
 				cout << s << endl;
 			}
 		}
@@ -67,7 +84,7 @@ void losuj_przepis()
 		plik.open("Brownie.txt", ios::in);
 		if (plik.is_open()) {
 			while (!plik.eof()) {
-				plik >> s;
+				getline(plik, s);
 				cout << s << endl;
 			}
 		}
@@ -80,7 +97,7 @@ void losuj_przepis()
 		plik.open("Sernik.txt", ios::in);
 		if (plik.is_open()) {
 			while (!plik.eof()) {
-				plik >> s;
+				getline(plik, s);
 				cout << s << endl;
 			}
 		}
@@ -88,4 +105,14 @@ void losuj_przepis()
 			cout << "Nie mozna otworzyc plik." << endl;
 		plik.close();
 	}
+	char wybor;
+	cout << "Czy chcesz zapisac przepis do pliku? " << endl << "Wpisz T/N: ";
+	cin >> wybor;
+	if (wybor == 'T')
+	{
+		ofstream plik1("Twoj_przepis.txt");
+		plik1 << s; //poprawic!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		cout << "Wylosowany przepis zostal zapisany w pliku \"Twoj_przepis\"";
+	}
+		wewnetrzna();
 }

@@ -8,5 +8,5 @@
 #include <string>
 void start(), tytul(), menu();
 void instrukcja();
-
+void wewnetrzna();
 void losuj_przepis();
