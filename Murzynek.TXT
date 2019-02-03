@@ -1,1 +1,21 @@
-murzynek-przepis
+Blaszka: 25 36 
+Ilosc skladnikow: 
+8
+XXX
+Przepis na blaszke o wymiarach 25x36cm.
+Skladniki: 
+Margaryna: 25 dag
+Cukier: 2 szklank.
+Kakao: 3 lyzk.
+Cukier_wanilinowy: 1 szt
+Woda: 0.5 szklank.
+Jajka: 4 szt
+Maka: 2 szklank.
+Proszek_do_pieczenia: 2 lyzk.
+
+Przygotowanie:
+Margaryne, cukier, kakao, cukier wanilinowy i wode zagotowac.
+Zagotowana mase ostudzic.
+Do ostudzonej masy dodac zoltka i make i proszek do pieczenia.
+Na koncu dodac ubite bialka.
+Piec w temperaturze 180 przez okolo 50 minut. 

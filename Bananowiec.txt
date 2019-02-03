@@ -1,0 +1,27 @@
+Blaszka: 24 36 
+Ilosc skladnikow: 
+11
+XXX
+Przepis na blaszke o wymiarach 24x36cm.
+Skladniki:
+Jajka(na_biszkopt): 4 szt
+Cukier(na_biszkopt): 4 lyzk.
+Proszek_do_pieczenia(na_biszkopt): 0.5 lyzeczk.
+Cukier(warstwa_z_bananami): 0.5 szklank.
+Banany(warstwa_z_bananami): 1 kg
+Margaryna(warstwa_z_bananami): 0.75 szt
+Zoltka(warstwa_z_bananami): 3 szt
+Galaretka_zolta(warstwa_z_bananami): 1 szt
+Bialka(warstwa_z_bialek): 3 szt
+Cukier(warstwa_z_bialek): 1 lyzk.
+Galaretka_zielona(warstwa_z_bialek): 1 szt
+
+Przygotowanie biszkoptu:
+Bialka oddzielic od zoltek i ubic na sztywna piane, dodac cukier i zoltka. Wsypac make z proszkiem do pieczenia 
+i wymieszac szaptulka. Upiec w temperaturze 180 do tzw. "suchego patyczka".
+Przygotowanie warstwy z bananami:
+Cukier, margaryne i zoltka zmiksowac. Dodawac banany pokrojone w plasterki. Galaretke zrobic na 1 szklanke wody. 
+Poczekac az ostygnie, wlac do masy i porzadnie zmiksowac. Mase wylozyc na biszkopt i wlozyc do lodowki.
+Przygotowanie warstwy z bialek:
+Bialka ubic na sztywno z dodatkiem cukru. Galaretke zrobic na 1 szklanke wody. Poczekac az ostygnie, 
+wlac do masy z bialek i wylozyc na ciasto. Pokroic 1 banana w plasterki, oblozyc ciasto i zalac galaretka.

@@ -1,0 +1,23 @@
+Blaszka: 24 36
+Ilosc skladnikow: 
+10
+XXX
+Przepis na blaszke o wymiarach 24x36cm.
+Skladniki:
+Serek_President: 0.5 kg
+Cukier: 0.75 szklank.
+Cukier_wanilinowy: 1 szt
+Galaretka_cytrynowa: 2 szt
+Sok_z_cytryny: 1 cytryn.
+Smietanka_36: 500 ml
+Herbatniki: 250 g
+Czekolada_deserowa: 100 g
+Mleko: 3 lyzk.
+Wiorki_kokosowe: 50 g
+
+Przygotowanie: 
+Na dnie blaszki wylozyc herbatniki. Rozpuscic galaretki, dodac sok z cytryny,
+wymieszac. Serek wymieszac z cukrem. Smietanke ubic na sztywno, dodac wystudzona
+galaretke. Smietanke polaczyc z serkiem za pomoca lyzki. Przelozyc na herbatniki.
+Gore wylozyc herbatnikami, polewa z mleka i czekolady i przysypac kokosem. 
+Wlozyc do lodowki na cala noc.

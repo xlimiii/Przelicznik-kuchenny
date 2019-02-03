@@ -1,1 +1,18 @@
-babka-przepis to jest
+Blaszka: 24 36 
+Ilosc skladnikow: 
+6
+XXX 
+Przepis na blaszke o wymiarach: 24x36cm.
+Skladniki: 
+Maka: 3 szklank.
+Margaryna: 25 dag 
+Cukier: 1 szklank. 
+Jajka: 6 szt
+Mleko: 1 szklank. 
+Proszek_do_pieczenia: 15 g
+
+Przygotowanie:
+Margaryne utrzec z cukrem i jajkami.
+Do dobrze utartej masy dodawac na zmiane
+make wymieszana z proszkiem do pieczenia oraz mleko.
+Piec w temperaturze 180 przez ok. 45 minut.

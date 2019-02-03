@@ -1,1 +1,20 @@
-sernik-przepis
+Tortownica: 24
+Ilosc skladnikow:
+6
+XXX
+Przepis na tortownice o srednicy 24 cm.
+Skladniki:
+Ser_z_wiaderka: 1 kg
+Jajka: 4 szt
+Maslo: 200 g
+Cukier: 150 g
+Maka_ziemniaczana: 4 lyzk.
+Olejek_waniliowy: 3 kropl.
+
+Przygotowanie: 
+Ser, jajka, roztopione i przestudzone maslo, cukier, make ziemniaczana i olejek
+umiescic w misce i zmiksowac do polaczenia skladnikow. 
+Geste ciasto przelozyc do tortownicy i wyrownac powierzchnie.
+Ciasto piec przez 20 minut w temperaturze 190. Nastepnie zmiejszyc temperature do
+150 stopni i piec kolejne 30 minut. Po tym czasie ustawic 120 stopni i piec ostatne 30 minut.
+Po wylaczeniu piekarnka zostawic ciasto w srodku na 10 minut. 

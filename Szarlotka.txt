@@ -1,0 +1,25 @@
+Blaszka: 24 36
+Ilosc skladnikow:
+9
+XXX
+Przepis na blaszke o wymiarach 24x36cm.
+Skladniki:
+Maka(ciasto): 320 g
+Maslo(ciasto): 250 g
+Cukier(ciasto): 80 g
+Jajko(ciasto): 1 szt
+Cukier_wanilinowy(ciasto): 1 lyzk.
+Proszek_do_pieczenia(ciasto): 2 lyzeczk.
+Jablka(farsz): 2 kg
+Cukier(farsz): 40 g
+Cynamon(farsz): 1 lyzeczk.
+
+Przygotowanie farszu:
+Obierz jablka, zetrzyj na tarce o grubych oczkach, przeloz do rondla, dodaj cukier
+i cynamon, smaz okolo 25 minut, az jablka zaczna zamieniac sie w mus.
+Przygotowanie ciasta:
+Wymieszac w duzej misce wszystkie skladniki ciasta i ugniatac. Ulepic z ciasta
+kulke, owinac folia i wlozyc na godzine do lodowki. Podzielic ciasto na dwie czesci.
+Rozwalkuj jedna z nich i wyloz nia dno formy. Spod ciasta piecz 15 minut w temp. 180.
+Na podpieczony spod wyloz mus jablkowy. Zetrzyj druga czesc ciasta na tarce i posyp 
+ciasto z gory. Ciasto piecz godzine w temperaturze 180.

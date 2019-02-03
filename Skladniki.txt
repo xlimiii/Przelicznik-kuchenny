@@ -1,3 +1,9 @@
 Skladniki w przeliczeniu na wybrana foremke: 
-mleko: 251.211ml
-jajka: 5.02422szt
+Margaryna:: 872.222dag
+Cukier:: 69.7778szklank.
+Kakao:: 104.667lyzk.
+Cukier_wanilinowy:: 34.8889szt
+Woda:: 17.4444szklank.
+Jajka:: 139.556szt
+Maka:: 69.7778szklank.
+Proszek_do_pieczenia:: 69.7778lyzk.

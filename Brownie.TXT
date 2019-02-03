@@ -1,14 +1,16 @@
-Brownie "Czarna magia" 
-Przepis na tortownice o srednicy: 26cm.
-
-Skladniki: 
-czekolada gorzka: 1 tabliczka
-czekolada mleczna: 2 tabliczki
-maka: 0.5 szklanki
+Tortownica: 26
+Ilosc skladnikow: 
+7
+XXX
+Przepis na tortownice o srednicy 26cm.
+Skladniki:
+czekolada_gorzka: 1 tablicz.
+czekolada_mleczna: 2 tablicz.
+maka: 0.5 szklank.
 maslo: 100 g
-cukier: 1 szklanka
-jajka: 4 sztuki
-ekstrakt waniliowy: 2 lyzki
+cukier: 1 szklank.
+jajka: 4 szt
+ekstrakt_waniliowy: 2 lyzk.
 
 Przygotowanie: 
 Wbic jajka do miseczki, dodac ekstrakt waniliowy oraz cukier.

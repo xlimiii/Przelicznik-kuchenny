@@ -1,0 +1,39 @@
+Blaszka: 24 36
+Ilosc skladnikow: 
+12
+XXX 
+Przepis na blaszke o wymiarach 24x36cm.
+Skladniki: 
+Maslo(ciasto): 250 g
+Cukier(ciasto): 200 g
+Maka(ciasto): 200 g
+Proszek_do_pieczenia(ciasto): 1.5 lyz.
+Kakao(ciasto): 3 lyz
+Mleko(masa): 0.5 l
+Kasza_manna(masa): 6 lyz.
+Maslo(masa): 200 g
+Cukier(masa): 200 g
+Wiorki_kokosowe(masa): 200 g
+Gorzka_czekolada(polewa): 200 g
+Slodka_smietana_30(polewa): 100 ml
+
+Przygotowanie biszkoptu:
+Maslo utrzec z cukrem. Dodawac jajka pojedynczo. Dodac make,proszek,kakao,mleko.
+Piec 20 minut w temperaturze 180. Ostudzic.
+Przygotowanie masy:
+Mleko zagotowac. Dodac kasze manne i maslo. Dokladnie wymieszac.
+Dodac cukier i kokos.
+Przygotowanie polewy: 
+Roztopic czekolade, wymieszac ze slodka smietanka.
+
+
+
+
+
+
+
+
+
+Przygotowanie:
+
+

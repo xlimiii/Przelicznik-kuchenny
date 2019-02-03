@@ -1,0 +1,28 @@
+Tortownica: 26 
+Ilosc skladnikow: 
+14
+XXX
+Przepis na tortownice o srednicy 26cm.
+Skladniki:
+maka: 1.5 szklank.
+starta_marchewka: 1.5 szklank.
+jajka: 4 szt
+olej: 1 szklank.
+cukier: 1 szklank.
+proszek_do_pieczenia: 1 lyzeczk.
+soda: 1 lyzeczk.
+cynamon: 1 lyzeczk.
+cukier_wanilinowy: 1 lyzeczk.
+pokrojone_orzechy_wloskie: 1 szklank.
+sol: 0.5 lyzeczk.
+slony_serek: 200 g
+miod: 8 lyzeczk.
+maslo: 4 lyzk.
+
+Przygotowanie:
+Jajka ubijac z cukrem i cukrem wanilinowym. Powoli dodawac olej.
+Powoli dodawac make z sola, proszkiem, soda i cynamonem.
+Wsypac marchewke i orzechy i wymieszac. Piec w temp. 180 przez ok. 50 minut.
+Przygotowanie masy do przelozenia:
+Utrzec maslo, dodawac po lyzeczce serka. Doslodzic miodem.
+Przekroic ciasto w polowie i przelozyc masa.

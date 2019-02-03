@@ -20,4 +20,5 @@ struct przelicznik_foremek {
 	double* Ilosci_w = &ile;
 	std::string* Jednostki_w = &jedn;
 	void przeliczone(std::string* wsk1, double* wsk2, std::string* wsk3);
+	void glowna();
 };
