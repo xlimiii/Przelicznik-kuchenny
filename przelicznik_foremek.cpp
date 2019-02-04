@@ -1,5 +1,5 @@
 //
-//  2_przelicznik_foremek.cpp
+//  przelicznik_foremek.cpp
 //  "Gotuj z Limk¹"
 //
 //  Created by Dominika Limanowka on 23/01/2019.
@@ -11,7 +11,7 @@
 #include"Nag³ówek.h"
 #include"przelicznik_foremek.h"
 using namespace std;
-void przelicznik_foremek::glowna()
+void przelicznik_foremek::glowna() //funkcja g³ówna 
 {
 	char kont;
 	do {
@@ -41,7 +41,7 @@ void przelicznik_foremek::glowna()
 	} while (kont != 'A' || kont != 'M' || kont != 'E');
 
 }
-void przelicznik_foremek::instrukcja2()
+void przelicznik_foremek::instrukcja2() //instrukcja
 {
 	system("cls");
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 13);
@@ -60,7 +60,7 @@ void przelicznik_foremek::instrukcja2()
 	cout << "Wcisnij enter, aby przejsc dalej.";
 	cin.get(); cin.get();
 }
-void przelicznik_foremek::przel_foremek()
+void przelicznik_foremek::przel_foremek() //g³ówna funkcja
 {
 	instrukcja2();
 	wyb_formy();
@@ -119,7 +119,7 @@ double przelicznik_foremek::wyb_formy() //wybor foremek, zwraca objetosc
 	}
 	return v1;
 }
-double przelicznik_foremek::wyb_formy2()
+double przelicznik_foremek::wyb_formy2() //wybór formy docelowej, zwraca objetosc
 {
 	char do_for;
 	do {
@@ -165,7 +165,7 @@ double przelicznik_foremek::wyb_formy2()
 	}
 	return v2;
 }
-int przelicznik_foremek::wczyt_skladniki()
+int przelicznik_foremek::wczyt_skladniki() //wczytuje nazwy, ilosci, jednostki
 {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 	ustaw_kursor(30, 15); cout << "Z ilu skladnikow sklada sie ciasto?"; 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 13); cout<<" Wpisz ilosc skladnikow: ";
@@ -213,7 +213,7 @@ int przelicznik_foremek::wczyt_skladniki()
 	Jednostki_w = Jednostka;
 	return ilosc_skladnikow;
 }
-void przelicznik_foremek::przeliczone( string* wsk1, double* wsk2, string* wsk3)
+void przelicznik_foremek::przeliczone( string* wsk1, double* wsk2, string* wsk3) //wyswietla przeliczone wartosci
 {
 	system("cls");
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 13);
@@ -240,19 +240,19 @@ void przelicznik_foremek::przeliczone( string* wsk1, double* wsk2, string* wsk3)
 		cout << "\nPrzeliczone wartosci zostaly zapisane w pliku \"Skladniki\"" << endl;
 	}
 }
-double przelicznik_foremek::objetoscp(double a, double b)
+double przelicznik_foremek::objetoscp(double a, double b) //objetosc prostokatnej blaszki
 {
 	double objetosc;
 	objetosc = a * b;
 	return objetosc;
 }
-double przelicznik_foremek::objetosck(double d)
+double przelicznik_foremek::objetosck(double d) //objetosc tortownicy
 {
 	double objetosc;
 	objetosc = (d / 2) * (d / 2) * 3.14;
 	return objetosc;
 }
-void ustaw_kursor(int x, int y)
+void ustaw_kursor(int x, int y) //ustawia kursor
 {
 	COORD c;
 	c.X = x;

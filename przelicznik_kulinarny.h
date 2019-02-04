@@ -1,3 +1,9 @@
+//
+//  przelicznik_kulinarny.h
+//  "Gotuj z Limk¹"
+//
+//  Created by Dominika Limanowka on 23/01/2019.
+//  Copyright © 2019 Dominika Limanowka. All rights reserved.
 #pragma once
 #include<string>
 struct przelicznik_kulinarny {

@@ -9,7 +9,7 @@
 using namespace std;
 int main()
 {
-	start();
+	start();	//uruchamia ca³y program
 	system("pause");
 }
 

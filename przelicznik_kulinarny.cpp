@@ -1,5 +1,5 @@
 //
-//  1_przelicznik_kulinarny.cpp
+//  przelicznik_kulinarny.cpp
 //  "Gotuj z Limk¹"
 //
 //  Created by Dominika Limanowka on 23/01/2019.
@@ -11,7 +11,7 @@
 #include"Nag³ówek.h"
 #include"przelicznik_kulinarny.h"
 using namespace std;
-void przelicznik_kulinarny::instrukcja1()
+void przelicznik_kulinarny::instrukcja1() //instrukcja
 {
 	system("cls");
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 13);
@@ -31,7 +31,7 @@ void przelicznik_kulinarny::instrukcja1()
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 	cin.get(); cin.get();
 }
-void przelicznik_kulinarny::glowna()
+void przelicznik_kulinarny::glowna()  //co robiæ dalej?
 {
 	char kont;
 	do {
@@ -55,7 +55,7 @@ void przelicznik_kulinarny::glowna()
 	} while (kont != 'A' || kont != 'M' || kont != 'E');
 
 }
-void przelicznik_kulinarny::przel_kulinarny()
+void przelicznik_kulinarny::przel_kulinarny() //g³owna funkcja dla przelicznika kulinarnego
 {
 	instrukcja1();
 	wybor_produktu();
@@ -66,7 +66,7 @@ void przelicznik_kulinarny::przel_kulinarny()
 	glowna();
 	
 }
-int przelicznik_kulinarny::wybor_produktu()
+int przelicznik_kulinarny::wybor_produktu() //wybór produktu z listy
 {	do {
 		system("CLS");
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 13);
@@ -93,7 +93,7 @@ int przelicznik_kulinarny::wybor_produktu()
 	system("CLS");
 	return produkt;
 }
-int przelicznik_kulinarny::z_czegoz()
+int przelicznik_kulinarny::z_czegoz() //wybor ramki z przepisu
 {
 	do {
 		system("CLS");
@@ -121,7 +121,7 @@ int przelicznik_kulinarny::z_czegoz()
 	} while (z_czego != 1 && z_czego != 2 && z_czego != 3 && z_czego != 4 && z_czego != 5 && z_czego != 6 && z_czego != 7 && z_czego != 8);
 	return z_czego;
 }
-int przelicznik_kulinarny::do_czegoz() 
+int przelicznik_kulinarny::do_czegoz() //wybor foremki docelowej
 {
 	do
 	{
@@ -177,7 +177,7 @@ double przelicznik_kulinarny::jaka_gestosc(int a) //funckja zwracajaca gestosc p
 
 	return tab_d[a];
 }
-double przelicznik_kulinarny::przel_jedn(int a, int b, int c)
+double przelicznik_kulinarny::przel_jedn(int a, int b, int c) //funkcja, która przelicza
 {
 	system("CLS");
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 13);
@@ -220,7 +220,7 @@ double przelicznik_kulinarny::przel_jedn(int a, int b, int c)
 		}
 		return wynik;
 }
-void przelicznik_kulinarny::drukuj_wynik(int a, int b, int c, double wynik)
+void przelicznik_kulinarny::drukuj_wynik(int a, int b, int c, double wynik) //drukuje przeliczone wartoœci
 {
 	system("CLS");
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 13);
@@ -236,7 +236,7 @@ void przelicznik_kulinarny::drukuj_wynik(int a, int b, int c, double wynik)
 	ustaw_kursor(43, 11); cout << "Nacisnij enter, aby przejsc dalej.";
 	cin.get(); cin.get();
 }
-void przelicznik_kulinarny::ustaw_kursor(int x, int y)
+void przelicznik_kulinarny::ustaw_kursor(int x, int y) //funkcja ustawia kursor na zadane wspó³rzêdne
 {
 	COORD c;
 	c.X = x ;

@@ -1,5 +1,5 @@
 //
-//  3_losuj_przepis.cpp
+//  przepisy.cpp
 //  "Gotuj z Limk¹"
 //
 //  Created by Dominika Limanowka on 23/01/2019.
@@ -14,7 +14,7 @@
 #include"przepisy.h"
 using namespace std;
 przelicznik_foremek p;
-constexpr int ile_przepisow = 10;
+constexpr int ile_przepisow = 10; //sprawdzic ilosc przepisów, dodac do struktury
 przepis szarlotka{ 10, "Szarlotka", nullptr }; 
 przepis sernik_cyt{ 9, "Sernik cytrynowy", &szarlotka };
 przepis sernik{ 8,"Sernik", &sernik_cyt };
@@ -28,7 +28,7 @@ przepis babka{ 1, "Babka", &bananowiec };
 przepisy gotuj_z_limka{ &babka };
 string tablica_z_nazwami[4][ile_przepisow] = { {"0","1","2","3","4","5", "6","7","8","9"}, {"Babka.txt", "Bananowiec.txt", "Brownie.txt", "Bounty.txt", "Country.txt", "Marchewka.txt", "Murzynek.txt", "Sernik.txt", "Sernik_cyt.txt", "Szarlotka.txt"},{"1","2","3","4","5","6", "7", "8","9","10"}, {"Przepis na babke","Przepis na pyszne ciasto bananowe","Przepis na brownie \"Czarna Magia\"", "Przepis na ciasto jak Bounty", "Przepis na ciasto jak Kinder Country", "Przepis na ciasto marchewkowe","Przepis na murzynka", "Przepis na sernik", "Przepis na sernik cytrynowy", "Przepis na szarlotke"}};
 przepis tablica[ile_przepisow] = { babka, bananowiec, brownie, marchewka, murzynek, szarlotka };
-void wybierz_przepis()
+void wybierz_przepis() //u¿ytkownik wybiera przepis z listy
 {
 	int liczba;
 	liczba = gotuj_z_limka.drukuj_liste();
@@ -44,12 +44,12 @@ void wybierz_przepis()
 	}
 	tablica[liczba - 1].wyswietl_przepis(nazwa, liczba);
 }
-void wylosuj_przepis()
+void wylosuj_przepis() //losuje przepis
 {
 	system("cls");
 	int nr_przepisu;
 	srand(time(NULL));
-	nr_przepisu = rand() % ile_przepisow + 1;  //losuje 0,1,2,3,4 albo 5
+	nr_przepisu = rand() % ile_przepisow + 1;  
 	cout << "Wylosowano liczbe: " << nr_przepisu;
 	fstream plik;
 	string s;
@@ -63,11 +63,11 @@ void wylosuj_przepis()
 	}
 	tablica[nr_przepisu - 1].wyswietl_przepis(nazwa, nr_przepisu);
 }
-void przepis::drukuj_nazwe()
+void przepis::drukuj_nazwe() //funkcja drukuje numer i tytul przepisu
 {
 	cout << numer << ". " << tytul << endl;
 }
-void przepis::wyswietl_przepis(string nazwa, int a)
+void przepis::wyswietl_przepis(string nazwa, int a) //wyœwwietla ca³y przepis
 {
 	ifstream plik;
 	string s;
@@ -88,15 +88,15 @@ void przepis::wyswietl_przepis(string nazwa, int a)
 		cout << "Nie mozna otworzyc pliku." << endl;
 	plik.close();
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 13);
-	cout << "Czy chcesz przeliczyc ten przepis na inna foremke? \nWpisz T/N: ";
+	cout << "Czy chcesz przeliczyc ten przepis na inna foremke? \nWpisz T/N: "; //przelicza
 	char wybor;
 	cin >> wybor;
 	wybor = toupper(wybor);
 	if (wybor == 'T')
 	{
-		tablica[a - 1].sprawdz_ilosc_skladnikow(nazwa, a);
-		tablica[a - 1].sprawdz_v1(nazwa, a);
-		tablica[a - 1].przelicz(nazwa, a);
+		tablica[a - 1].sprawdz_ilosc_skladnikow(nazwa, a); // sprawdza iloœæ skladnikow
+		tablica[a - 1].sprawdz_v1(nazwa, a); // sprawdza objetosc podan¹ w przepisie
+		tablica[a - 1].przelicz(nazwa, a); //przelicza z wykorzystaniem funkcji z przelicznik_foremek
 	}
 		cout << "Wcisnij enter, aby kontynuowac.";
 		cin.get(); cin.get();
@@ -125,7 +125,7 @@ void przepis::wyswietl_przepis(string nazwa, int a)
 		}
 	} while (kont != 'A' || kont != 'M' || kont != 'E');
 }
-int przepis::sprawdz_ilosc_skladnikow(std::string nazwa, int a)
+int przepis::sprawdz_ilosc_skladnikow(std::string nazwa, int a) //sprawdza ilosc skladnikow w przepisie
 {
 	system("cls");
 	int pozycja;
@@ -154,7 +154,7 @@ int przepis::sprawdz_ilosc_skladnikow(std::string nazwa, int a)
 	}
 	plik.close();
 }
-double przepis::sprawdz_v1(std::string nazwa, int a)
+double przepis::sprawdz_v1(std::string nazwa, int a) //sprawdza v dla blaszki z przepisu
 {
 	system("cls");
 	ifstream plik;
@@ -184,7 +184,7 @@ double przepis::sprawdz_v1(std::string nazwa, int a)
 	plik.close();
 	return p.v1;
 }
-void przepis::przelicz(std::string nazwa, int a)
+void przepis::przelicz(std::string nazwa, int a) //przelicza iloœæ sk³adników z przepisu
 {
 	system("cls");
 	p.wyb_formy2();
@@ -229,7 +229,7 @@ void przepis::przelicz(std::string nazwa, int a)
 	}
 	plik.close();
 }
-int przepis::gdzie_zaczac(std::string nazwa, int a)
+int przepis::gdzie_zaczac(std::string nazwa, int a) //sprawdza gdzie zacz¹æ wyœwietlaæ przepis
 {
 	system("cls");
 	int pozycja;
@@ -256,7 +256,7 @@ int przepis::gdzie_zaczac(std::string nazwa, int a)
 		return 0;
 	}
 }
-int przepisy::drukuj_liste()
+int przepisy::drukuj_liste() //drukuje menu dla przepisow
 {
 	int liczba;
 	do {
