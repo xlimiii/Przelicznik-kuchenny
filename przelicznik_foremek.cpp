@@ -35,7 +35,7 @@ void przelicznik_foremek::glowna() //funkcja g³ówna
 		{
 		case 'A': przel_foremek(); break;
 		case 'M': menu(); break;
-		case 'E': return; break;
+		case 'E': exit(0); break;
 		default: {cout << "Cos poszlo nie tak, sprobuj ponownie"; } break;
 		}
 	} while (kont != 'A' || kont != 'M' || kont != 'E');

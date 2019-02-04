@@ -1,9 +1,10 @@
 Skladniki w przeliczeniu na wybrana foremke: 
-Margaryna:: 8.72222dag
-Cukier:: 0.697778szklank.
-Kakao:: 1.04667lyzk.
-Cukier_wanilinowy:: 0.348889szt
-Woda:: 0.174444szklank.
-Jajka:: 1.39556szt
-Maka:: 0.697778szklank.
-Proszek_do_pieczenia:: 0.697778lyzk.
+Maka(ciasto):: 196.541g
+Maslo(ciasto):: 153.547g
+Cukier(ciasto):: 49.1352g
+Jajko(ciasto):: 0.61419szt
+Cukier_wanilinowy(ciasto):: 0.61419lyzk.
+Proszek_do_pieczenia(ciasto):: 1.22838lyzeczk.
+Jablka(farsz):: 1.22838kg
+Cukier(farsz):: 24.5676g
+Cynamon(farsz):: 0.61419lyzeczk.

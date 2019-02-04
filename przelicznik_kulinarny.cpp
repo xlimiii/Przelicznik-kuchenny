@@ -49,7 +49,7 @@ void przelicznik_kulinarny::glowna()  //co robiæ dalej?
 		{
 		case 'A': przel_kulinarny(); break;
 		case 'M': menu(); break;
-		case 'E': return; break;
+		case 'E': exit(0); break;
 		default: {ustaw_kursor(42, 16); cout << "Cos poszlo nie tak, sprobuj ponownie"; ustaw_kursor(68, 15); cout << "  "; } break;
 		}
 	} while (kont != 'A' || kont != 'M' || kont != 'E');

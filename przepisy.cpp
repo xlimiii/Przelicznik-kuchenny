@@ -27,7 +27,7 @@ przepis bananowiec{ 2, "Bananowiec", &brownie };
 przepis babka{ 1, "Babka", &bananowiec };
 przepisy gotuj_z_limka{ &babka };
 string tablica_z_nazwami[4][ile_przepisow] = { {"0","1","2","3","4","5", "6","7","8","9"}, {"Babka.txt", "Bananowiec.txt", "Brownie.txt", "Bounty.txt", "Country.txt", "Marchewka.txt", "Murzynek.txt", "Sernik.txt", "Sernik_cyt.txt", "Szarlotka.txt"},{"1","2","3","4","5","6", "7", "8","9","10"}, {"Przepis na babke","Przepis na pyszne ciasto bananowe","Przepis na brownie \"Czarna Magia\"", "Przepis na ciasto jak Bounty", "Przepis na ciasto jak Kinder Country", "Przepis na ciasto marchewkowe","Przepis na murzynka", "Przepis na sernik", "Przepis na sernik cytrynowy", "Przepis na szarlotke"}};
-przepis tablica[ile_przepisow] = { babka, bananowiec, brownie, marchewka, murzynek, szarlotka };
+przepis tablica[ile_przepisow] = { babka, bananowiec, brownie, bounty, country, marchewka, murzynek, sernik, sernik_cyt, szarlotka };
 void wybierz_przepis() //u¿ytkownik wybiera przepis z listy
 {
 	int liczba;
@@ -119,7 +119,7 @@ void przepis::wyswietl_przepis(string nazwa, int a) //wyœwwietla ca³y przepis
 		{
 		case 'A': wybierz_przepis(); break;
 		case 'M': menu(); break;
-		case 'E': return; break;
+		case 'E': exit(0); break;
 		default: {
 			cout << "Cos poszlo nie tak, sprobuj ponownie"; } break;
 		}

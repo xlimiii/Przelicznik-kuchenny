@@ -2,6 +2,7 @@ Blaszka: 24 36
 Ilosc skladnikow:
 5
 XXX 
+Przepis na blaszke o wymiarach: 24x36cm.
 Skladniki: 
 Smietanka_36: 400 ml
 Serek_mascarpone: 250 g

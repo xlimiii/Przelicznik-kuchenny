@@ -1,17 +1,5 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Katalog pośredni (Debug\) zawiera pliki udostępnione z innego projektu (Projekt_zaliczeniowy.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
-  0_start.cpp
-c:\users\domin\source\repos\projekt_programowanie_s. i\projekt_programowanie_s. i\0_start.cpp(25): warning C4129: " ": nierozpoznany znak sekwencji ucieczki
-c:\users\domin\source\repos\projekt_programowanie_s. i\projekt_programowanie_s. i\0_start.cpp(29): warning C4129: " ": nierozpoznany znak sekwencji ucieczki
-c:\users\domin\source\repos\projekt_programowanie_s. i\projekt_programowanie_s. i\0_start.cpp(35): warning C4129: " ": nierozpoznany znak sekwencji ucieczki
   przelicznik_foremek.cpp
   przelicznik_kulinarny.cpp
-  przepisy.cpp
-c:\users\domin\source\repos\projekt_programowanie_s. i\projekt_programowanie_s. i\przepisy.cpp(51): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
-c:\users\domin\source\repos\projekt_programowanie_s. i\projekt_programowanie_s. i\przepisy.cpp(143): warning C4244: "=": konwersja z "std::streamoff" do "int", możliwa utrata danych
-c:\users\domin\source\repos\projekt_programowanie_s. i\projekt_programowanie_s. i\przepisy.cpp(203): warning C4244: "=": konwersja z "std::streamoff" do "int", możliwa utrata danych
-c:\users\domin\source\repos\projekt_programowanie_s. i\projekt_programowanie_s. i\przepisy.cpp(247): warning C4244: "=": konwersja z "std::streamoff" do "int", możliwa utrata danych
-  Źródło.cpp
   Generowanie kodu...
-c:\users\domin\source\repos\projekt_programowanie_s. i\projekt_programowanie_s. i\przepisy.cpp(156): warning C4715: "przepis::sprawdz_ilosc_skladnikow”: niewszystkie ścieżki kodu zwracają wartość
-c:\users\domin\source\repos\projekt_programowanie_s. i\projekt_programowanie_s. i\przepisy.cpp(258): warning C4715: "przepis::gdzie_zaczac”: niewszystkie ścieżki kodu zwracają wartość
   projekt_programowanie_s. I.vcxproj -> C:\Users\domin\source\repos\projekt_programowanie_s. I\Debug\projekt_programowanie_s. I.exe
